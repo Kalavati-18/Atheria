@@ -101,6 +101,9 @@ app.use((req,res,next)=>{
   next();
 })
 
+app.get("/", (req, res) => {
+    res.redirect("/listings");
+});
 
 //went to listing.js under router folder so use it
 app.use("/listings",listingRouter);
